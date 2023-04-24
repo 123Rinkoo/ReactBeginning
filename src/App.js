@@ -3,23 +3,16 @@ import './App.css';
 import ExpenseItem from './components/ExpenseItem';
 
 function App() {
+  const locationofExpenditure=['Delhi','Lucknow','Ahmedabad','Bangalore','Surat','Guwahati','Hyderabad','Remote','Uttrakhand','Chandigarh'];
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-        <h3>This is a tutorial of React</h3>
-        <ExpenseItem></ExpenseItem>
+        <h3>This is from React</h3>
+        
+        <ExpenseItem location={locationofExpenditure[0]}></ExpenseItem>
+        <ExpenseItem location={locationofExpenditure[1]}></ExpenseItem>
+        <ExpenseItem location={locationofExpenditure[2]}></ExpenseItem>
+        <ExpenseItem location={locationofExpenditure[3]}></ExpenseItem>
       </header>
     </div>
   );
