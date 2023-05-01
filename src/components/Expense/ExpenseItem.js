@@ -7,6 +7,7 @@ const ExpenseItem=(props)=> {
         <div>
             <div className='expense-item h2'>
                 <ExpenseDetail location={props.location} />
+            <button onClick={()=>{ console.log('item is going to be deleted!!!')}} >Delete Expense</button>
             </div>
         </div>
     );
