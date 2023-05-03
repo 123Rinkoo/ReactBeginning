@@ -1,15 +1,40 @@
+import React,{useState} from 'react';
 import './ExpenseForm.css'
 
 const ExpenseForm=()=> {
-    const changeHandler=(event)=>{
-        console.log(event.target.value);
+    const [userInput, setUserInput]=useState({
+        enteredDesc:'',
+        enteredAmount:'',
+        enteredCategory:''
+     });
+
+    const changeHandler1=(event)=>{
+         setUserInput({
+             ...userInput,
+             enteredDesc: event.target.value
+         })
+     }
+     
+    const changeHandler2=(event)=>{
+        setUserInput({
+            ...userInput,
+            enteredAmount: event.target.value
+        })
+        
     }
+    const changeHandler3=(event)=>{
+        setUserInput({
+            ...userInput,
+            enteredCategory: event.target.value
+        })
+    }
+
     return (
         <div>
             <form action="">
-                Description:<input type="text" onChange={changeHandler}/>
-                | Expense Amount: <input type="text" />
-                | Category: <select name="Category" id="">
+                Description:<input type="text" onChange={changeHandler1}/>
+                | Expense Amount: <input type="text" onChange={changeHandler2}/>
+                | Category: <select name="Category" id="" onChange={changeHandler3}>
                     <option value="Health">Health</option>
                     <option value="Food">Food</option>
                     <option value="Fuel">Fuel</option>
