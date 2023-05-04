@@ -29,9 +29,13 @@ const ExpenseForm=()=> {
         })
     }
 
+    const submitHandler=(event)=>{
+        event.preventDefault();
+        console.log(userInput);
+    }
     return (
         <div>
-            <form action="">
+            <form onClick={submitHandler}>
                 Description:<input type="text" onChange={changeHandler1}/>
                 | Expense Amount: <input type="text" onChange={changeHandler2}/>
                 | Category: <select name="Category" id="" onChange={changeHandler3}>
